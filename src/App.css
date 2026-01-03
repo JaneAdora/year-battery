@@ -1,0 +1,69 @@
+.app {
+  min-height: 100vh;
+  min-height: 100dvh; /* Dynamic viewport height for mobile */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1.5rem, 5vw, 2.5rem);
+  text-align: center;
+  max-width: 100%;
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+}
+
+.date {
+  font-size: clamp(1.25rem, 5vw, 2rem);
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.battery-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.progress-text {
+  font-size: clamp(0.875rem, 3.5vw, 1.25rem);
+  color: #a0a0a0;
+  margin: 0;
+  line-height: 1.5;
+  max-width: 90%;
+}
+
+.highlight {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Ensure touch-friendly sizing */
+@media (max-width: 320px) {
+  .app {
+    padding: 0.75rem;
+  }
+  
+  .container {
+    gap: 1rem;
+  }
+}
+
+/* Tablet and larger screens */
+@media (min-width: 768px) {
+  .container {
+    gap: 3rem;
+  }
+}
